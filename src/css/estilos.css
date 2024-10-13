@@ -1,0 +1,158 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("../Tokens/Foto_Em_Grupo.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(8px);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+.feiticeiros {
+    display: flex;
+    gap: 30px;
+    padding: 30px 0;
+
+}
+
+.cartao-feiticeiro {
+    display: none;
+    max-width: 360px;
+    border-radius: 10px;
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cartao-feiticeiro.aberto {
+display: block;
+}
+
+.cartao-feiticeiro img {
+width: 100%;
+height: 100%;
+margin-top: 10px;
+}
+
+.cartao-feiticeiro .cartao-topo {
+    padding: 30px 40px 0;
+}
+
+.cartao-feiticeiro .nome {
+    margin-bottom: 5px;
+}
+
+.cartao-feiticeiro .tipo {
+    background-color: #ffffff;
+    font-size: 12px;
+    opacity: 0.7;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+.cartao-feiticeiro .detalhes {
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartao-feiticeiro .cartao-informacoes {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 30px 50px;
+    margin-top: -70px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+}
+
+.cartao-feiticeiro .cartao-informacoes h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #6b727a;
+
+}
+
+.cartao-feiticeiro .cartao-informacoes .descricao {
+    padding: 0 10px;
+    font-size: 15px;
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.tipo-herdado {
+    background-color: rgb(113, 221, 248);
+}
+
+.tipo-restringido {
+    background-color: #757473d2;
+}
+
+.tipo-inato {
+    background-color: #0086d3;
+}
+
+.tipo-derivado {
+    background-color: #ff7b2f;
+}
+
+.tipo-feto {
+    background-color: #BA68C8;
+}
+
+.tipo-sem-tecnica {
+    background-color: #a2e0f8;
+}
+
+.listagem {
+    max-width: 200px; 
+}
+
+.listagem .feiticeiro img {
+    width: 25%;
+}
+
+.listagem .feiticeiro {
+    background-color: #6b727a;
+    color: #ffffff;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    min-height: 70px;
+    transition: 0.15 ease-in-out;
+}
+
+.listagem .feiticeiro:hover {
+    transform: scale(1.05);
+}
+
+.listagem .feiticeiro span {
+    padding-right: 20px;
+}
+
+.listagem .feiticeiro.ativo {
+    background-color: #181d64;
+}
